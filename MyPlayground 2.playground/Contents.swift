@@ -212,21 +212,20 @@
 //print("Користувач авторизован: ")
 
 import Cocoa
-print("ДОМАШНЄ ЗАВДАННЯ 2\n\n")
-print("ЧАСТИНА 1 - Основи\n")
-print("Розділ 1.1 Константи\n")
+
 
 //MARK: - 1.1
 
+let petName: String = "Barsik"
+
 let nf = NumberFormatter()
 nf.numberStyle = NumberFormatter.Style.decimal
-nf.maximumFractionDigits = 1
-var namesList = ["Barsik","Persik","Mursik","Sharik","Kot"]
+nf.maximumFractionDigits = 2
 
-let petName: String = namesList.randomElement()!
 let petWeight: Double = Double.random(in: 2...16)
-let petAge: Int = Int.random(in: 1...20)
+let petAge: Int = 4
 let petIsHungry: Bool = Bool.random()
+
 var ishungry: String
 
 if petIsHungry == false {
@@ -235,7 +234,9 @@ if petIsHungry == false {
         ishungry = "Так"
     }
 
+
+
 print("Ім'я хатньої тварини: \(petName) ")
-print("Вага хатньої тварини: \(nf.string(from: petWeight as NSNumber)!)")
+print("Вага хатньої тварини: \(nf.stringFromNumberpetWeight)")
 print("Вік хатньої тварини: \(petAge)")
 print("Хатня тварина голодна: \(ishungry)")
