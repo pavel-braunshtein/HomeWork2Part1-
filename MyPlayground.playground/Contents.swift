@@ -358,3 +358,11 @@ func wethInf(){
     
 }
 wethInf()
+
+//MARK: - 1.5
+print("\nРозділ 1.5 Опціонали\n")
+
+var userLoggedIn: Bool?
+print("Користувач авторизован: \(String(describing: userLoggedIn))")
+userLoggedIn = Bool.random()
+print("Користувач авторизован: \(userLoggedIn!)")
