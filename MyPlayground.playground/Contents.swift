@@ -239,3 +239,62 @@ print("Ім'я хатньої тварини: \(petName) ")
 print("Вага хатньої тварини: \(nf.string(from: petWeight as NSNumber)!)")
 print("Вік хатньої тварини: \(petAge)")
 print("Хатня тварина голодна: \(ishungry)")
+
+
+//MARK: - 1.2
+
+
+print("\nРозділ 1.2 Змінні\n")
+let Names = ["Ihor","Oleg","Alex","Paul","Vladimir"]
+let Surnames = ["Koval","Smith","Johnson","Swift","Trump"]
+
+class Person {
+    var Name = Names.randomElement()
+    var Surname = Surnames.randomElement()
+    var Age = Int.random(in: 18...100)
+    var Height = Int.random(in: 160...210)
+    var Weight = Int.random(in: 60...120)
+    var isMarried = Bool.random()
+    var isMarried2 = ""
+}
+
+let person = Person()
+
+if person.isMarried == true {
+    person.isMarried2 = "Так"
+}
+    else {
+        person.isMarried2 = "Ні"
+    }
+
+
+func year2018(){
+    print("Інформація за 2018 р.:\n")
+    print("Ім'я: \(person.Name!)")
+    print("Прізвище: \(person.Surname!)")
+    print("Вік: \(person.Age)")
+    print("зріст: \(person.Height)см")
+    print("Вага: \(person.Weight)кг")
+
+    print("У шлюбі: \(person.isMarried2)")
+}
+year2018()
+
+
+if person.isMarried == true {
+    person.isMarried2 = "Ні"}
+else{
+    person.isMarried2 = "Так"
+}
+
+func thisYear(){
+    person.isMarried != person.isMarried
+    print("\nІнформація за поточний рік:")
+    print("Ім'я: \(person.Name!)")
+    print("Прізвище: \(person.Surname!)")
+    print("Вік: \(person.Age+6)")
+    print("Зріст: \(person.Height)см")
+    print("Вага: \(person.Weight+Int.random(in: 1...20))кг")
+    print("У шлюбі: \(person.isMarried2)")
+}
+thisYear()
