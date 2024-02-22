@@ -331,3 +331,30 @@ func weatherForToday(){
     print("Температура: \(weather.celcius)C")
 }
 weatherForToday()
+
+//MARK: - 1.4
+print("\nРозділ 1.4 Кортежі\n")
+
+var profileInfo = (Name:person.Name, Surname:person.Surname, Age:person.Age, Height:person.Height, Weight:person.Weight, IsMaried: person.isMarried2)
+var weatherInfo = (weather.humidity, weather.celcius, weather.preasure)
+
+func profInf(){
+    print("Інфорація профіля:\n")
+    print("Ім'я: \(profileInfo.Name!)")
+    print("Прізвище: \(profileInfo.Surname!)")
+    print("Вік: \(profileInfo.Age+Int.random(in: 1...10))")
+    print("Зріст: \(profileInfo.Height)см")
+    print("Вага: \(profileInfo.Weight+Int.random(in: 1...20))кг")
+    print("У шлюбі: \(profileInfo.IsMaried)")
+}
+profInf()
+weather.humidity = Int.random(in: -20...50)
+
+func wethInf(){
+    print("\nІнфорація про погоду:\n")
+    print("Тиск: \(weatherInfo.2)hPa")
+    print("Вологість: \(weatherInfo.0)%")
+    print("Температура: \(weatherInfo.1)C")
+    
+}
+wethInf()
