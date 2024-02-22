@@ -298,3 +298,36 @@ func thisYear(){
     print("У шлюбі: \(person.isMarried2)")
 }
 thisYear()
+
+//MARK: - 1.3
+print("\nРозділ 1.3 Псевдоніми\n")
+
+typealias Humidity = Int
+typealias Preasure = Int
+typealias Celcius = Int
+
+struct Weather{
+    var humidity: Humidity = Int.random(in: 1...100)
+    var preasure: Preasure = Int.random(in: 1000...2000)
+    var celcius: Celcius = Int.random(in: -20...50)
+}
+var weather = Weather()
+func yesterdayWeather(){
+    print("Погода вчора:\n")
+    print("Тиск: \(weather.preasure)hPa")
+    print("Вологість: \(weather.humidity)%")
+    print("Температура: \(weather.celcius)C")
+}
+yesterdayWeather()
+
+weather.humidity = Int.random(in: 1...100)
+weather.preasure = Int.random(in: 1000...2000)
+weather.celcius = Int.random(in: -20...50)
+
+func weatherForToday(){
+    print("\nПогода сьогодні:\n")
+    print("Тиск: \(weather.preasure)hPa")
+    print("Вологість: \(weather.humidity)%")
+    print("Температура: \(weather.celcius)C")
+}
+weatherForToday()
